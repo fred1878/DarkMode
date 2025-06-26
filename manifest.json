@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Dark Mode",
+  "version": "0.1",
+  "description": "Force a crap dark mode ctrl+shift+d",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["dark-mode.js"],
+      "css": ["dark-mode.css"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Toggle dark mode"
+  }
+} 
